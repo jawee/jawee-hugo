@@ -1,0 +1,3 @@
+[submodule "themes/jawee-hugo-theme"]
+	path = themes/jawee-hugo-theme
+	url = https://github.com/jawee/jawee-hugo-theme.git

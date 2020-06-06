@@ -1,0 +1,23 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Andreas Olsson"
+theme = "jawee-hugo-theme"
+
+## Site Settings
+[params]
+author = "Andreas Olsson"
+intro = "Software Developer"
+description = "Senior Specialist at Netcompany, DK"
+dateformat = "Jan 2, 2006"
+
+## Social Accounts
+[params.social]
+github = "jawee"
+instagram = "jawee15"
+linkedin = "andreas-olsson-86597559"
+twitter = "andreasnolsson"
+facebook = "andreas.olsson.961"
+
+youtube = "UCD0rORXiklcWPcLR6xO52NQ"
+twitch = "jawee15"
+email = "olsson.andreas@gmail.com"
