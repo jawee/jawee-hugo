@@ -23,7 +23,7 @@ pipeline {
         ])
       }
     }
-    stage('Build) {
+    stage('Build') {
       steps {
         echo ">> Build application"
         sh "hugo -b https://jawee.se"
@@ -43,5 +43,4 @@ pipeline {
            deleteDir()
        }
    }
-
 } 
