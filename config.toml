@@ -24,7 +24,7 @@ email = "olsson.andreas@gmail.com"
 
 ## Extras
 [params.extra]
-copyright = "© 2020. Andreas Olsson."
+copyright = "Andreas Olsson."
 poweredby = true
 highlightjs = true
 socialmarkup = true
