@@ -21,3 +21,12 @@ facebook = "andreas.olsson.961"
 youtube = "UCD0rORXiklcWPcLR6xO52NQ"
 twitch = "jawee15"
 email = "olsson.andreas@gmail.com"
+
+## Extras
+[params.extra]
+copyright = "© 2020. Andreas Olsson."
+poweredby = true
+highlightjs = true
+socialmarkup = true
+toc = true
+displayrssicon = false
