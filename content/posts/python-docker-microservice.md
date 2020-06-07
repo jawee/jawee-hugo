@@ -10,6 +10,8 @@ So I wrote a small microservice in python, using flask and run through docker.
 
 The service takes a list from javascript that contains the usernames to check, and returns the data exactly as it's received from the twitch api. 
 
+The code can be found at [twitch-live-microservice](https://github.com/jawee/twitch-live-microservice.git)
+
 ###### Docker-compose file
 ```yml
 version: '3'
