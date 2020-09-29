@@ -31,9 +31,9 @@ If you don't add a module (-m), it will automatically add `-m commands` to the t
    tasks:
      - name: Set authorized key took from file
        authorized_key:
-         user: figge
+         user: <user>
          state: present
-          key: "{{ lookup('file', '/home/figge/.ssh/id_rsa.pub') }}"
+          key: "{{ lookup('file', '/home/<user>/.ssh/id_rsa.pub') }}"
 ```
 
 To run it on new servers
