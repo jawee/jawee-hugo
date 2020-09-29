@@ -44,3 +44,23 @@ To run it on servers where key is already added (pointless)
 
 To run it on a specific group
 `ansible-playbook playbook.yml -l <group>`
+
+##### Playbook for running update
+```yaml
+---
+- name: Update server
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Run apt upgrade
+      apt:
+        upgrade: yes
+         update_cache: yes
+    - name: run dist-upgrade
+      apt:
+        upgrade: dist
+```
+
+To run sudo command
+`ansible-playbook playbook.yml -e "ansible_sudo_pass=<password>"`
