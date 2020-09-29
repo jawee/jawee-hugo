@@ -27,7 +27,7 @@ If you don't add a module (-m), it will automatically add `-m commands` to the t
 ```yaml
 ---
 - name: Set authorized key took from file
-   hosts: proxmox
+   hosts: all
    tasks:
      - name: Set authorized key took from file
        authorized_key:
@@ -42,3 +42,5 @@ To run it on new servers
 To run it on servers where key is already added (pointless)
 `ansible-playbook playbook.yml`
 
+To run it on a specific group
+`ansible-playbook playbook.yml -l <group>`
