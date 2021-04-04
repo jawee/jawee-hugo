@@ -86,6 +86,11 @@ server {
 }
 ```
 
+## Letsencrypt certificate on VPS
+```bash
+sudo certbot --nginx -d subdomain.domain.tld
+```
+
 ## Further reading:
 * https://medium.com/tangram-visions/what-they-dont-tell-you-about-setting-up-a-wireguard-vpn-46f7bd168478
 * https://theorangeone.net/posts/wireguard-getting-started/
