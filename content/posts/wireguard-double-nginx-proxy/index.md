@@ -55,7 +55,13 @@ ___VPS nginx config___
 ```bash
 server {
     listen 80;
+    listen [::]:80;
     server_name subdomain.domain.tld;
+
+    location ^~ /.well-known/acme-challenge/ {
+        default_type "text/plain";
+        root /home/<user>/public/letsencrypt;
+    }
 
     location / {
         proxy_pass http://10.1.10.2/;
