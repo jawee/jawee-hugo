@@ -21,7 +21,7 @@ ___VPS configuration (wg0.conf)___
 ```bash
 [Interface]
 Address = 10.1.10.1
-PrivateKey = 
+PrivateKey = <Server private key>
 ListenPort = 51820
 
 [Peer]
