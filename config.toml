@@ -6,8 +6,8 @@ theme = "jawee-hugo-theme"
 ## Site Settings
 [params]
 author = "Andreas Olsson"
-intro = "Software Developer"
-description = "Senior Specialist at Netcompany, DK"
+intro = ""
+description = ""
 dateformat = "Jan 2, 2006"
 
 ## Social Accounts
