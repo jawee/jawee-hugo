@@ -2,7 +2,7 @@
 title: "Hellracers"
 date: 2020-06-06T20:58:38+02:00
 draft: false
-image: /projects/hellracers.jpg
+image: hellracers.jpg
 ---
 Website for the simracing team Hellracers.
 
