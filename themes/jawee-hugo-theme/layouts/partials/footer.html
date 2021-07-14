@@ -1,0 +1,11 @@
+<footer class="text-center footer">
+    <div class="container">
+        <hr>
+        {{ with .Site.Params.extra }}
+            <h6 class="text-center copyright-heading">© {{ dateFormat "2006" now }}. {{ .copyright | markdownify }}</h6>
+            {{ if ne .poweredby false }}
+                <h6 class="text-center powered-heading">Powered by <a href="https://gohugo.io/">Hugo  v{{ hugo.Version }}</a></h6>
+            {{ end }}
+        {{ end }}
+    </div>
+  </footer>

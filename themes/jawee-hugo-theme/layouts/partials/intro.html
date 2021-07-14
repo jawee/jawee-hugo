@@ -1,0 +1,58 @@
+<header class="row text-center header">
+    <h1 class="author-heading">{{ .Site.Params.author }}</h1>
+</header>
+
+<section id="info-pane" class="row text-center info">
+    {{ with .Site.Params.intro }}
+    <h3 class="intro-heading">{{ . | markdownify }}</h3>
+    {{ end }}
+    {{ with .Site.Params.description }}
+    <h4 class="description-heading">{{ . | markdownify }}</h4>
+    {{ end }}
+</section>
+
+<section id="social-pane" class="row text-center social">
+    {{ with .Site.Params.social.twitter }}
+    <a href="https://twitter.com/{{.}}" aria-label="Twitter" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+    {{ end }}
+    {{ with .Site.Params.social.facebook }}
+    <a href="https://facebook.com/{{.}}" aria-label="Facebook" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+    {{ end }}
+    {{ with .Site.Params.social.github }}
+    <a href="https://github.com/{{.}}" aria-label="Github" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+    {{ end }}
+    {{ with .Site.Params.social.instagram }}
+    <a href="https://instagram.com/{{.}}" aria-label="Instagram" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+    {{ end }}
+    {{ with .Site.Params.social.linkedin }}
+    <a href="https://linkedin.com/in/{{.}}" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+    {{ end }}
+    {{ with .Site.Params.social.youtube}}
+    <a href="https://youtube.com/channel/{{.}}" aria-label="Youtube" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+    {{ end }}
+    {{ with .Site.Params.social.twitch}}
+    <a href="https://www.twitch.tv/{{.}}" aria-label="Twitch" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+    {{ end }}
+    {{ with .Site.Params.social.email }}
+    <a href="mailto:{{.}}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+    {{ end }}
+  </section>
+  {{ if .Site.Params.extra.socialmarkup }}
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}",
+    "url": "{{ .Site.Params.baseURL }}",
+    "sameAs": [
+      {{ with .Site.Params.social.twitter }}"https://twitter.com/{{.}}",{{ end }}
+      {{ with .Site.Params.social.facebook }}"https://facebook.com/{{.}}",{{ end }}
+      {{ with .Site.Params.social.github }}"https://github.com/{{.}}",{{ end }}
+      {{ with .Site.Params.social.instagram }}"https://instagram.com/{{.}}",{{ end }}
+      {{ with .Site.Params.social.linkedin }}"https://linkedin.com/in/{{.}}",{{ end }}
+      {{ with .Site.Params.social.youtube}}"https://youtube.com/user/{{.}}",{{ end }}
+      {{ with .Site.Params.social.twitch}}"https://www.twitch.tv/{{.}}",{{ end }}
+    ]
+  }
+  </script>
+  {{ end }}

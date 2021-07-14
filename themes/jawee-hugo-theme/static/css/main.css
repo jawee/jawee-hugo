@@ -1,0 +1,93 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #333333;
+}
+
+.meta {
+    color: #666666;
+}
+
+a {
+    color: #526d7a;
+}
+
+img {
+    max-width: 100%;
+}
+
+a:focus, a:hover {
+    color: #23527c;
+}
+
+.author-heading {
+    width: 100%;
+    font-weight: 300;
+    color: #333333;
+}
+
+.title {
+    font-weight: 100;
+}
+
+.published-date {
+    font-weight: 100;
+}
+
+.intro-heading {
+    width: 100%;
+    color: #666666;
+    font-weight: 200;
+}
+
+.description-heading {
+    width: 100%;
+    color: #999999;
+    font-weight: 200;
+}
+
+.powered-heading {
+    width: 100%;
+}
+
+.copyright-heading {
+    width: 100%;
+}
+
+.latest-posts-heading {
+    font-weight: 100;
+}
+
+.social {
+    margin: 0 auto;
+    display: block;
+}
+
+header {
+    margin-top: 75px;
+}
+
+hr {
+    display: block;
+}
+
+footer {
+    color: #999999;
+}
+
+footer h6 {
+    font-size: 0.75rem;
+    font-weight: 100;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.home-link h4 {
+    font-weight: 100;
+}
