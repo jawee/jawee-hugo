@@ -2,6 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Andreas Olsson"
 theme = "jawee-hugo-theme"
+enableRobotsTXT = true
 
 ## Site Settings
 [params]
