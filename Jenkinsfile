@@ -4,25 +4,6 @@ pipeline {
   agent any
   
   stages {
-    /* checkout repo */
-    stage('Checkout SCM') {
-      steps {
-        checkout([
-          $class: 'GitSCM',
-          branches: [[name: 'master']],
-          extensions: [[$class: 'SubmoduleOption',
-                        disableSubmodules: false,
-                        parentCredentials: false,
-                        recursiveSubmodules: true,
-                        reference: '',
-                        trackingSubmodules: false]],
-          userRemoteConfigs: [[
-            url: 'https://github.com/jawee/jawee-hugo.git',
-            credentialsId: '',
-          ]]
-        ])
-      }
-    }
     stage('Build') {
       steps {
         echo ">> Build application"
