@@ -1,0 +1,29 @@
+name: Build and publish
+
+on:
+  push:
+    branch:
+      - 'master'
+    tags:
+      - '*'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Download Hugo v${{ env.HUGO_VERSION }} Linux x64
+      run: "wget https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}
+        /hugo_${{ env.HUGO_VERSION }}_Linux-64bit.deb -O hugo_${{ env.HUGO_VERSION }}_Linux-64bit.deb"
+
+    - name: Install Hugo
+      run: sudo dpkg -i hugo*.deb
+
+    - name: build
+      # move to variable
+      run: hugo -b https://jawee.se
+
+    - name: ls
+      run: ls public/
