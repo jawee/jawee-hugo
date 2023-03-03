@@ -22,7 +22,7 @@ jobs:
 
     - name: build
       # move to variable
-      run: hugo -b ${{ env.SITE_URL }}
+      run: hugo -b ${{ vars.SITE_URL }}
 
     - name: ls
       run: ls public/
