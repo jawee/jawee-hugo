@@ -37,7 +37,7 @@ jobs:
       run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }}
 
     - name: Rsync deploy
-      run: rsync -r -e "ssh -o StrictHostKeyChecking=no" public/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_TARGET }}
+      run: rsync -r -e "ssh -o StrictHostKeyChecking=no" public/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_PATH }}
 
 
     # - name: Deploy
