@@ -31,21 +31,10 @@ jobs:
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.SSH_KEY }}
-        known_hosts: 'placeholder'
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-    - name: Add known hosts
-      run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }}
+    # - name: Add known hosts
+    #   run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }}
 
     - name: Rsync deploy
       run: rsync -r -e "ssh -o StrictHostKeyChecking=no" public/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_PATH }}
-
-
-    # - name: Deploy
-    #   uses: easingthemes/ssh-deploy@main
-    #   env:
-    #     SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-    #     ARGS: "-r"
-    #     SOURCE: "public/"
-    #     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-    #     REMOTE_USER: ${{ secrets.REMOTE_USER }}
-    #     TARGET: ${{ secrets.REMOTE_TARGET }}
