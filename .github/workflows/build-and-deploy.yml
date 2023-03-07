@@ -24,5 +24,15 @@ jobs:
       # move to variable
       run: hugo -b ${{ vars.SITE_URL }}
 
-    - name: ls
-      run: ls public/
+    # - name: ls
+    #   run: ls public/
+
+    - name: Deploy
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+        ARGS: "-r"
+        SOURCE: "public/"
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
+        TARGET: ${{ secrets.REMOTE_TARGET }}
