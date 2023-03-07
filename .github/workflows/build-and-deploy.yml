@@ -34,7 +34,7 @@ jobs:
         known_hosts: 'placeholder'
 
     - name: Add known hosts
-      run: ssh-keyshan -H ${{ secrets.REMOTE_HOST }}
+      run: ssh-keyscan -H ${{ secrets.REMOTE_HOST }}
 
     - name: Rsync deploy
       run: rsync -r public/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_TARGET }}
