@@ -27,12 +27,24 @@ jobs:
     # - name: ls
     #   run: ls public/
 
-    - name: Deploy
-      uses: easingthemes/ssh-deploy@main
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-        ARGS: "-r"
-        SOURCE: "public/"
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: ${{ secrets.REMOTE_TARGET }}
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_KEY }}
+
+    - name: Add known hosts
+      run: ssh-keyshan -H ${{ secrets.REMOTE_HOST }}
+
+    - name: Rsync deploy
+      run: rsync -r public/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.REMOTE_TARGET }}
+
+
+    # - name: Deploy
+    #   uses: easingthemes/ssh-deploy@main
+    #   env:
+    #     SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+    #     ARGS: "-r"
+    #     SOURCE: "public/"
+    #     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+    #     REMOTE_USER: ${{ secrets.REMOTE_USER }}
+    #     TARGET: ${{ secrets.REMOTE_TARGET }}
