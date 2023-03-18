@@ -6,6 +6,7 @@ draft: true
 
 ## Windows
 
+![sessionizer](/posts/developer-productivity/images/sessionizer.gif "sessionizer")
 ![sessionizer1](/posts/developer-productivity/images/sessionizer1.png "sessionizer1")
 ![sessionizer2](/posts/developer-productivity/images/sessionizer2.png "sessionizer2")
 ![sessionizer3](/posts/developer-productivity/images/sessionizer3.png "sessionizer3")
