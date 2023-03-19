@@ -48,3 +48,4 @@ Use the alias `vs` to open visual studio with the .sln-file in that directory.
 
 ### Navigation between projects
 tmux-sessionizer
+![sessionizer](posts/developer-productivity-2023/images/tmux-sessionizer.gif "tmux-sessionizer")
