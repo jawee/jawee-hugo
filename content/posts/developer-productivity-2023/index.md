@@ -2,7 +2,10 @@
 title: "Developer productivity 2023"
 date: 2023-03-18T09:35:20+02:00
 draft: true
+toc: true
 ---
+
+Highly inspired by [ThePrimeagen](https://github.com/theprimeagen).
 
 ## Windows
 
@@ -39,3 +42,9 @@ in your selected folder/project.
 Use the alias `vs` to open visual studio with the .sln-file in that directory.
 
 ![vs1](posts/developer-productivity-2023/images/vs1.png "vs1")
+
+
+## Linux/MacOS
+
+### Navigation between projects
+tmux-sessionizer
