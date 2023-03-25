@@ -91,3 +91,19 @@ ul {
 .home-link h4 {
     font-weight: 100;
 }
+
+#TableOfContents ul {
+    display: block;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#TableOfContents ul ul {
+    padding-left: 20px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+}

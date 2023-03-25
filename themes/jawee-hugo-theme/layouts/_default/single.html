@@ -10,6 +10,14 @@
     </div>
   </section>
   <hr>
+  {{ if (.Params.toc) }}
+  <section id="table-of-contents" class="row">
+      <div class="col-md-12 text-justify content">
+          <h2>Table of Contents</h2>
+          {{ .TableOfContents }}
+      </div>
+  </section>
+  {{ end }}
   <section id="content-pane" class="row">
     <div class="col-md-12 text-justify content">
       {{ .Content }}
