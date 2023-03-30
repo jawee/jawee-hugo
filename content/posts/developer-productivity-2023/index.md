@@ -49,7 +49,6 @@ Use the alias `vs` to open visual studio with the .sln-file in that directory.
 
 ### Linux/MacOS
 
-#### Navigation between projects
 `tmux-sessionizer` in action below. I have it bound to <C-f>, such that I have the same shortcut regardless of development environment I'm in.
 
 What makes `tmux-sessionizer` so nice, is that if you open your editor of choice (neovim) and a couple of other windows in that session, even if you navigate to another project, when you navigate back you're right back where you started.
