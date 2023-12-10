@@ -35,3 +35,4 @@ cmake -DBUILD_SHARED_LIBS=ON ..
 make
 sudo make install
 ```
+from [https://github-wiki-see.page/m/raysan5/raylib/wiki/Working-on-GNU-Linux](https://github-wiki-see.page/m/raysan5/raylib/wiki/Working-on-GNU-Linux)
