@@ -2,7 +2,7 @@
 <div class="row">
     {{ range where .Site.RegularPages "Section" "in" (.Site.Params.postSections | default (slice "projects")) | first 5}}
     <div class="col-sm">
-        {{ $image := .Parent.Resources.GetMatch .Params.Image }}
+        {{ $image := .Resources.GetMatch .Params.Image }}
         {{ $scaled := $image.Resize "540x" }}
         <a class="list-entry-link" href="{{ .Permalink }}"><img src="{{ $scaled.RelPermalink }}" alt="{{ .Params.Title }}"></a>
     </div>
